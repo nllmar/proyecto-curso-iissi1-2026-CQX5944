@@ -294,7 +294,7 @@ para que las valoraciones correspondan a compras realizadas y utilicen una escal
 
 ### 4.3. Requisitos no funcionales 
 
-**R.N.F. 01. Título requisito no funcional**
+
 #### R.NF.01 ADAPTACIÓN A DIFERENTES DISPOSITIVOS
 
 Como cliente  
