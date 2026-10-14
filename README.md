@@ -292,12 +292,44 @@ para que las valoraciones correspondan a compras realizadas y utilicen una escal
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
-### 4.3. Requisitos no funcionales (opcional)
+### 4.3. Requisitos no funcionales 
 
 **R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+#### R.NF.01 ADAPTACIÓN A DIFERENTES DISPOSITIVOS
+
+Como cliente  
+quiero que la interfaz se adapte a ordenadores y teléfonos móviles,  
+para consultar las ofertas y mis reservas desde cualquiera de estos dispositivos.
+
+#### R.NF.02 CLARIDAD DE LA INFORMACIÓN
+
+Como cliente  
+quiero que los precios, las fechas y los horarios de recogida aparezcan identificados y con un formato uniforme,  
+para comprender las condiciones de cada oferta antes de reservar.
+
+#### R.NF.03 IDENTIFICACIÓN VISUAL DE LOS ESTADOS
+
+Como empleado del establecimiento  
+quiero que el estado de cada reserva se muestre mediante texto y, opcionalmente, un color que lo acompañe,  
+para distinguir las reservas pendientes, recogidas y canceladas sin depender únicamente del color.
+
+#### R.NF.04 MENSAJES COMPRENSIBLES
+
+Como usuario del sistema  
+quiero recibir mensajes claros cuando se produzca un error o una consulta no encuentre resultados,  
+para entender lo ocurrido y saber cómo continuar.
+
+#### R.NF.05 PROTECCIÓN DE CONTRASEÑAS
+
+Como usuario del sistema  
+quiero que mi contraseña se almacene mediante un mecanismo de hash seguro y no aparezca en las consultas,  
+para proteger mis credenciales de acceso.
+
+#### R.NF.06 CONTROL DE ACCESO
+
+Como administrador del sistema  
+quiero que los permisos de acceso a la información se comprueben en el servidor según el usuario y su rol,  
+para proteger las reservas de los clientes y la información operativa de los establecimientos.
 
 -- fin entregable 1 --
 
