@@ -13,30 +13,53 @@
         
 ## 2. Glosario de términos
 
-| **Cancelación** | Anulación de una reserva pendiente antes del inicio de la primera franja de recogida de los packs incluidos. |
-| **Cliente** | Persona registrada que consulta ofertas, reserva packs y los recoge en el establecimiento. |
-| **Descripción del contenido** | Información facilitada por el negocio sobre los productos que forman parte de un pack. |
-| **Establecimiento** | Cafetería, panadería o pequeño restaurante que ofrece sus excedentes mediante la plataforma. |
-| **Estado de la reserva** | Situación en la que se encuentra una reserva: pendiente, recogida o cancelada. |
-| **Excedente alimentario** | Producto que no se ha vendido durante la jornada y que el establecimiento considera apto para ofrecer para su consumo. |
-| **Fecha de recogida** | Día al que corresponde la oferta y en el que se recogerán los packs reservados. |
-| **Franja de recogida** | Intervalo definido por una hora de inicio y una hora de fin durante el cual se recoge un pack. |
-| **Historial de reservas** | Conjunto de reservas anteriores y actuales de un cliente. |
-| **Importe total** | Suma de los importes de todas las líneas de una reserva. |
-| **Información de alérgenos** | Información proporcionada por el establecimiento sobre los alérgenos de los productos ofrecidos. |
-| **Línea de reserva** | Registro que relaciona una reserva con un pack e indica su cantidad y precio unitario. |
-| **Oferta** | Publicación de un pack para una fecha concreta, con un precio, una disponibilidad y una franja de recogida. |
-| **Pack** | Conjunto de productos que se ofrece como una única unidad de venta. |
-| **Personal del establecimiento** | Usuarios asociados a un negocio que mantienen sus ofertas y atienden las recogidas. |
-| **Precio de referencia** | Precio habitual del contenido del pack, indicado por el establecimiento. |
-| **Precio reducido** | Importe que debe pagar el cliente por una unidad del pack ofrecido. |
-| **Reserva** | Solicitud confirmada de uno o varios packs de un mismo establecimiento para una misma fecha. |
-| **Reserva cancelada** | Reserva anulada cuyas unidades se han devuelto a la disponibilidad de las ofertas. |
-| **Reserva pendiente** | Reserva confirmada que todavía no se ha recogido ni cancelado. |
-| **Reserva recogida** | Reserva cuyos productos han sido entregados y cuyo importe se ha cobrado. |
-| **Reseña** | Puntuación y comentario de un cliente sobre una reserva recogida. |
-| **Tipo de pack** | Clasificación de la oferta: panadería, comida preparada o productos variados. |
-| **Unidades disponibles** | Cantidad de packs que todavía pueden reservarse. |
+- **Cancelación:** Anulación de una reserva pendiente antes del inicio de la primera franja de recogida de los packs incluidos.
+
+- **Cliente:** Persona registrada que consulta ofertas, reserva packs y los recoge en el establecimiento.
+
+- **Descripción del contenido:** Información facilitada por el negocio sobre los productos que forman parte de un pack.
+
+- **Establecimiento:** Cafetería, panadería o pequeño restaurante que ofrece sus excedentes mediante la plataforma.
+
+- **Estado de la reserva:** Situación en la que se encuentra una reserva: pendiente, recogida o cancelada.
+
+- **Excedente alimentario:** Producto que no se ha vendido durante la jornada y que el establecimiento considera apto para ofrecer para su consumo.
+
+- **Fecha de recogida:** Día al que corresponde la oferta y en el que se recogerán los packs reservados.
+
+- **Franja de recogida:** Intervalo definido por una hora de inicio y una hora de fin durante el cual se recoge un pack.
+
+- **Historial de reservas:** Conjunto de reservas anteriores y actuales de un cliente.
+
+- **Importe total:** Suma de los importes de todas las líneas de una reserva.
+
+- **Información de alérgenos:** Información proporcionada por el establecimiento sobre los alérgenos de los productos ofrecidos.
+
+- **Línea de reserva:** Registro que relaciona una reserva con un pack e indica su cantidad y precio unitario.
+
+- **Oferta:** Publicación de un pack para una fecha concreta, con un precio, una disponibilidad y una franja de recogida.
+
+- **Pack:** Conjunto de productos que se ofrece como una única unidad de venta.
+
+- **Personal del establecimiento:** Usuarios asociados a un negocio que mantienen sus ofertas y atienden las recogidas.
+
+- **Precio de referencia:** Precio habitual del contenido del pack, indicado por el establecimiento.
+
+- **Precio reducido:** Importe que debe pagar el cliente por una unidad del pack ofrecido.
+
+- **Reserva:** Solicitud confirmada de uno o varios packs de un mismo establecimiento para una misma fecha.
+
+- **Reserva cancelada:** Reserva anulada cuyas unidades se han devuelto a la disponibilidad de las ofertas.
+
+- **Reserva pendiente:** Reserva confirmada que todavía no se ha recogido ni cancelado.
+
+- **Reserva recogida:** Reserva cuyos productos han sido entregados y cuyo importe se ha cobrado.
+
+- **Reseña:** Puntuación y comentario de un cliente sobre una reserva recogida.
+
+- **Tipo de pack:** Clasificación de la oferta: panadería, comida preparada o productos variados.
+
+- **Unidades disponibles:** Cantidad de packs que todavía pueden reservarse.
 
 ## 3. Visión general del sistema
 
