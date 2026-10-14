@@ -7,9 +7,11 @@
 
 ## 1. Introducción al problema
 
+Actualmente, muchos establecimientos, como cafeterías, panaderías y pequeños restaurantes, tienen al final del día excedentes de alimentos que no llegan a venderse y que pueden acabar desperdiciándose. Por otro lado, hay personas que estarían interesadas en comprar estos productos a un precio más económico, pero no siempre conocen qué negocios tienen ofertas disponibles o cuándo pueden recogerlas.
 
+Para dar solución a este problema, se propone 'Aprovecha', una aplicación que permite a los establecimientos ofrecer packs de excedentes alimentarios a un precio reducido y a los clientes consultar y reservar los que les interesen. Cada oferta incluirá información sobre el contenido del pack, los alérgenos, los precios, las unidades disponibles y el horario de recogida.
 
-        --- meter boceto
+Además, la aplicación permitirá consultar las reservas y el estado de ellas, organizar las recogidas y conocer la actividad de los establecimientos. El pago se realizará directamente en el negocio cuando el cliente recoja los productos, por lo que no se incluirán pagos en línea ni entregas a domicilio.
         
 ## 2. Glosario de términos
 
@@ -65,6 +67,26 @@
 
 ### 3.1. Requisitos generales
 
+#### R.G.01. CENTRALIZACIÓN DE OFERTAS
+
+El sistema deberá reunir las ofertas de los establecimientos participantes mediante la entidad Pack, para que los clientes puedan consultar los excedentes alimentarios disponibles y comparar sus características y precios.
+
+#### R.G.02. GESTIÓN DE USUARIOS Y PERMISOS
+
+El sistema deberá distinguir entre clientes, personal de los establecimientos y administradores mediante la información de la entidad Usuario, para que cada tipo de usuario acceda únicamente a las funciones y los datos que le correspondan.
+
+#### R.G.03. CONTROL DE OFERTAS Y DISPONIBILIDAD
+
+El sistema deberá conservar la información de los packs y mantener actualizadas sus unidades disponibles, teniendo en cuenta las reservas y cancelaciones, para evitar que se reserven más unidades de las existentes.
+
+#### R.G.04. GESTIÓN Y SEGUIMIENTO DE RESERVAS
+
+El sistema deberá almacenar la información de las reservas y sus líneas mediante las entidades Reserva y Línea de Reserva, para conocer los packs solicitados, sus cantidades, sus importes y el estado de cada reserva.
+
+#### R.G.05. CONSULTA DE ACTIVIDAD Y VALORACIONES
+
+El sistema deberá permitir consultar la actividad de los establecimientos y las reseñas registradas mediante las entidades Reserva, Línea de Reserva y Reseña, para conocer las unidades entregadas, los importes correspondientes y las valoraciones de los clientes.
+
 ### 3.2. Usuarios del sistema
 #### 3.2.1. Cliente
 
@@ -116,17 +138,105 @@ Sus principales necesidades son:
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### R.F.01. CONSULTA DE ESTABLECIMIENTOS
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente
+quiero consultar la información de los negocios participantes mediante la entidad Establecimiento, incluyendo su identificador, nombre comercial, dirección, teléfono y descripción,
+para conocer dónde se encuentran y dónde debo recoger los packs que reserve.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+#### -> Prueba de aceptación
+
+Verificar que el sistema conserva y muestra correctamente los datos de cada establecimiento. Comprobar que la dirección y el teléfono corresponden al negocio consultado. Verificar que el filtro por nombre devuelve los establecimientos que coinciden con el criterio introducido.
+
+#### R.F.02. CONSULTA DE OFERTAS DISPONIBLES
+
+Como cliente
+quiero consultar la información de las ofertas mediante la entidad Pack, pudiendo filtrar por establecimiento, fecha de recogida, tipo de pack y precio máximo,
+para encontrar packs que se ajusten a mis preferencias.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema muestra correctamente las ofertas que cumplen los filtros seleccionados. Comprobar que, al utilizar varios filtros, los resultados cumplen todos los criterios indicados. Verificar que los packs sin unidades disponibles no aparecen como disponibles para reservar.
+
+#### R.F.03. CONSULTA DEL DETALLE DE UNA OFERTA
+
+Como cliente
+quiero consultar la información de una oferta mediante la entidad Pack, incluyendo su identificador, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha, horario de recogida y unidades disponibles,
+para conocer las características del pack antes de reservarlo.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema conserva y muestra correctamente los datos de cada oferta. Comprobar que los precios, la fecha y el horario de recogida corresponden al pack consultado. Verificar que las unidades disponibles coinciden con la disponibilidad actual de la oferta.
+
+#### R.F.04. CONSULTA DEL HISTORIAL DE RESERVAS
+
+Como cliente
+quiero consultar la información de mis reservas mediante la entidad Reserva, pudiendo filtrar por estado y fecha de recogida,
+para conocer la situación de mis reservas actuales y anteriores.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema muestra correctamente las reservas del cliente correspondiente. Comprobar que se pueden consultar las reservas pendientes, recogidas y canceladas, así como filtrar por fecha de recogida. Verificar que las reservas anteriores permanecen en el historial.
+
+#### R.F.05. CONSULTA DEL DETALLE DE UNA RESERVA
+
+Como cliente
+quiero consultar la información de mis reservas mediante las entidades Reserva y Línea de Reserva, incluyendo los packs, las cantidades, el precio unitario aplicado y el importe total,
+para comprobar qué productos he reservado y qué importe corresponde a cada uno.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema conserva y muestra correctamente los datos de la reserva y sus líneas. Comprobar que cada línea muestra la cantidad y el precio unitario aplicado al confirmar la reserva. Verificar que el importe total coincide con la suma de los importes de las líneas y que el cliente solo puede consultar sus propias reservas.
+
+#### R.F.06. CONSULTA DE RESERVAS PENDIENTES
+
+Como empleado del establecimiento
+quiero consultar las reservas pendientes de mi negocio mediante la entidad Reserva, incluyendo los packs y las cantidades de cada reserva mediante la entidad Línea de Reserva, pudiendo filtrar por fecha de recogida,
+para organizar la entrega de los productos.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema muestra correctamente las reservas pendientes del establecimiento al que pertenece el empleado. Comprobar que se muestran los packs y las cantidades de cada reserva. Verificar que el filtro por fecha devuelve las reservas correspondientes y que el empleado solo puede consultar las reservas de su establecimiento.
+
+#### R.F.07. CONSULTA DE OFERTAS Y DISPONIBILIDAD
+
+Como empleado del establecimiento
+quiero consultar la información de las ofertas de mi negocio mediante la entidad Pack, incluyendo las unidades disponibles y las ofertas agotadas,
+para conocer la disponibilidad de los packs publicados.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema muestra correctamente las ofertas del establecimiento correspondiente. Comprobar que las unidades disponibles tienen en cuenta las reservas no canceladas. Verificar que los packs agotados aparecen con cero unidades disponibles y que el empleado solo puede consultar las ofertas de su establecimiento.
+
+#### R.F.08. CONSULTA DEL RESUMEN DE ACTIVIDAD
+
+Como empleado del establecimiento
+quiero consultar un resumen de actividad mediante las entidades Reserva y Línea de Reserva, incluyendo las reservas recogidas, las unidades entregadas y los importes entre dos fechas,
+para conocer la actividad de mi negocio durante ese periodo.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema muestra únicamente las reservas recogidas del establecimiento durante el periodo consultado. Comprobar que el número de reservas, las unidades entregadas y los importes se calculan correctamente. Verificar que las reservas pendientes y canceladas no se incluyen en el resumen.
+
+#### R.F.09. CONSULTA DE RESEÑAS
+
+Como cliente
+quiero consultar las valoraciones de los establecimientos mediante la entidad Reseña, incluyendo la puntuación, el comentario y la fecha de publicación,
+para conocer las experiencias de otros compradores.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema conserva y muestra correctamente los datos de las reseñas del establecimiento consultado. Comprobar que la puntuación media se calcula a partir de las valoraciones registradas. Verificar que, si no existen reseñas, se indica «Sin valoraciones».
+
+#### R.F.10. CONSULTA DE USUARIOS
+
+Como administrador del sistema
+quiero consultar la información de los usuarios registrados mediante la entidad Usuario, pudiendo filtrar por rol e identificar el establecimiento asociado a cada empleado,
+para distinguir entre clientes, empleados y administradores y supervisar las cuentas existentes.
+
+#### -> Prueba de aceptación
+
+Verificar que el sistema muestra correctamente los usuarios que cumplen los criterios de búsqueda. Comprobar que el filtro por rol devuelve los usuarios correspondientes y que se identifica correctamente el establecimiento asociado a cada empleado. Verificar que las contraseñas se almacenan de forma protegida y no aparecen en las consultas.
 
 #### 4.1.1. Requisitos de información
 #### R.I.01 INFORMACIÓN SOBRE USUARIOS
