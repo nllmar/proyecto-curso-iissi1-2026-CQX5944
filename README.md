@@ -88,7 +88,7 @@ El sistema deberá almacenar la información de las reservas y sus líneas media
 El sistema deberá permitir consultar la actividad de los establecimientos y las reseñas registradas mediante las entidades Reserva, Línea de Reserva y Reseña, para conocer las unidades entregadas, los importes correspondientes y las valoraciones de los clientes.
 
 ### 3.2. Usuarios del sistema
-#### 3.2.1. Cliente
+#### 3.2.1. Usuario cliente
 
 El cliente es la persona que utiliza la plataforma para encontrar y reservar packs.
 
@@ -105,7 +105,7 @@ Sus principales necesidades son:
 
 El cliente tendrá acceso al detalle de sus propias reservas.
 
-#### 3.2.2. Personal del establecimiento
+#### 3.2.2. Usuario personal del establecimiento
 
 El personal está formado por los empleados que utilizan la plataforma en representación de un negocio.
 
@@ -122,7 +122,7 @@ Sus principales necesidades son:
 
 El personal accederá a la información operativa del establecimiento al que pertenece.
 
-#### 3.2.3. Administrador
+#### 3.2.3. Usuario administrador
 
 El administrador supervisa los usuarios y establecimientos de la plataforma.
 
