@@ -251,7 +251,7 @@ Como cliente
 quiero consultar las valoraciones mediante la entidad Reseña, incluyendo su identificador, reserva asociada, puntuación, comentario y fecha de publicación,  
 para conocer las experiencias de otros compradores con los establecimientos.
 
-#### R.I.08 INFORMACIÓN SOBRE IMPORTES Y RESUMEN DE ACTIVIDAD
+#### R.I.08 INFORMACIÓN SOBRE IMPORTES Y RESUMEN DE ACTIVIDAD  -- requisito funcional quitar de aquí
 
 Como empleado del establecimiento  
 quiero consultar los importes de las reservas y el resumen de actividad mediante los datos de Reserva y Línea de Reserva, así como las valoraciones obtenidas mediante Reseña,  
