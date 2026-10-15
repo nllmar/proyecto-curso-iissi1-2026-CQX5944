@@ -209,7 +209,7 @@ para distinguir entre clientes, empleados y administradores y supervisar las cue
 
 
 #### 4.1.1. Requisitos de información
-#### R.I.01 INFORMACIÓN SOBRE USUARIOS
+#### R.I.01 INFORMACIÓN SOBRE USUARIOS  --> quiero almacenar no consultar, 
 
 Como administrador del sistema  
 quiero acceder a la información de los usuarios registrados mediante la entidad Usuario, incluyendo su identificador, nombre, apellidos, correo electrónico y rol,  
@@ -224,7 +224,7 @@ para conocer dónde se encuentran y dónde debo recoger los packs que reserve.
 #### R.I.03 INFORMACIÓN SOBRE EL PERSONAL
 
 Como administrador del sistema  
-quiero consultar la asociación de cada usuario empleado con su establecimiento mediante la relación entre Usuario y Establecimiento,  
+quiero -almacenar del personal de cada establecimiento-consultar la asociación de cada usuario empleado con su establecimiento mediante la relación entre Usuario y Establecimiento,  
 para conocer qué personal pertenece a cada negocio y delimitar su acceso a las ofertas y reservas.
 
 #### R.I.04 INFORMACIÓN SOBRE LAS OFERTAS DE PACKS
