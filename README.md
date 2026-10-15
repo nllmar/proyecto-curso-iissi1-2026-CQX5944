@@ -1,6 +1,6 @@
 # APROVECHA - RESERVA DE EXCEDENTES ALIMENTARIOS
 
-## Miembros del grupo L8-04 (sustituir)
+## Miembros del grupo L8-04 
 
 1. Vidal Jiménez, Irene
 2. Llamas Marín, Nicolás  
