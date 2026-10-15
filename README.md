@@ -239,7 +239,7 @@ Como empleado del establecimiento
 quiero consultar la información de las reservas de mi negocio mediante la entidad Reserva, incluyendo su identificador, cliente, establecimiento, fecha y hora de realización, fecha de recogida y estado,  
 para identificar las reservas recibidas y organizar las entregas pendientes.
 
-#### R.I.06 INFORMACIÓN SOBRE LAS LÍNEAS DE RESERVA
+#### R.I.06 INFORMACIÓN SOBRE LAS LÍNEAS DE RESERVA  ---> quitar
 
 Como cliente  
 quiero consultar los packs incluidos en mis reservas mediante la entidad Línea de Reserva, incluyendo la reserva, el pack, la cantidad y el precio unitario aplicado al confirmar,  
