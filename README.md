@@ -136,7 +136,7 @@ Sus principales necesidades son:
 
 ## 4. Catálogo de requisitos
 
-### 4.1. Requisitos funcionales
+### 4.1. Requisitos funcionales ---> 10 consultas a la base de datos. Consultas que realizan cálculos que aparezcan una de cada una: sum, avg, max, min, count, group by
 
 #### R.F.01. CONSULTA DE ESTABLECIMIENTOS
 
@@ -144,9 +144,6 @@ Como cliente
 quiero consultar la información de los negocios participantes mediante la entidad Establecimiento, incluyendo su identificador, nombre comercial, dirección, teléfono y descripción,
 para conocer dónde se encuentran y dónde debo recoger los packs que reserve.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema conserva y muestra correctamente los datos de cada establecimiento. Comprobar que la dirección y el teléfono corresponden al negocio consultado. Verificar que el filtro por nombre devuelve los establecimientos que coinciden con el criterio introducido.
 
 #### R.F.02. CONSULTA DE OFERTAS DISPONIBLES
 
@@ -154,9 +151,6 @@ Como cliente
 quiero consultar la información de las ofertas mediante la entidad Pack, pudiendo filtrar por establecimiento, fecha de recogida, tipo de pack y precio máximo,
 para encontrar packs que se ajusten a mis preferencias.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema muestra correctamente las ofertas que cumplen los filtros seleccionados. Comprobar que, al utilizar varios filtros, los resultados cumplen todos los criterios indicados. Verificar que los packs sin unidades disponibles no aparecen como disponibles para reservar.
 
 #### R.F.03. CONSULTA DEL DETALLE DE UNA OFERTA
 
@@ -164,9 +158,6 @@ Como cliente
 quiero consultar la información de una oferta mediante la entidad Pack, incluyendo su identificador, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha, horario de recogida y unidades disponibles,
 para conocer las características del pack antes de reservarlo.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema conserva y muestra correctamente los datos de cada oferta. Comprobar que los precios, la fecha y el horario de recogida corresponden al pack consultado. Verificar que las unidades disponibles coinciden con la disponibilidad actual de la oferta.
 
 #### R.F.04. CONSULTA DEL HISTORIAL DE RESERVAS
 
@@ -174,9 +165,6 @@ Como cliente
 quiero consultar la información de mis reservas mediante la entidad Reserva, pudiendo filtrar por estado y fecha de recogida,
 para conocer la situación de mis reservas actuales y anteriores.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema muestra correctamente las reservas del cliente correspondiente. Comprobar que se pueden consultar las reservas pendientes, recogidas y canceladas, así como filtrar por fecha de recogida. Verificar que las reservas anteriores permanecen en el historial.
 
 #### R.F.05. CONSULTA DEL DETALLE DE UNA RESERVA
 
@@ -184,9 +172,6 @@ Como cliente
 quiero consultar la información de mis reservas mediante las entidades Reserva y Línea de Reserva, incluyendo los packs, las cantidades, el precio unitario aplicado y el importe total,
 para comprobar qué productos he reservado y qué importe corresponde a cada uno.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema conserva y muestra correctamente los datos de la reserva y sus líneas. Comprobar que cada línea muestra la cantidad y el precio unitario aplicado al confirmar la reserva. Verificar que el importe total coincide con la suma de los importes de las líneas y que el cliente solo puede consultar sus propias reservas.
 
 #### R.F.06. CONSULTA DE RESERVAS PENDIENTES
 
@@ -194,9 +179,6 @@ Como empleado del establecimiento
 quiero consultar las reservas pendientes de mi negocio mediante la entidad Reserva, incluyendo los packs y las cantidades de cada reserva mediante la entidad Línea de Reserva, pudiendo filtrar por fecha de recogida,
 para organizar la entrega de los productos.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema muestra correctamente las reservas pendientes del establecimiento al que pertenece el empleado. Comprobar que se muestran los packs y las cantidades de cada reserva. Verificar que el filtro por fecha devuelve las reservas correspondientes y que el empleado solo puede consultar las reservas de su establecimiento.
 
 #### R.F.07. CONSULTA DE OFERTAS Y DISPONIBILIDAD
 
@@ -204,9 +186,6 @@ Como empleado del establecimiento
 quiero consultar la información de las ofertas de mi negocio mediante la entidad Pack, incluyendo las unidades disponibles y las ofertas agotadas,
 para conocer la disponibilidad de los packs publicados.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema muestra correctamente las ofertas del establecimiento correspondiente. Comprobar que las unidades disponibles tienen en cuenta las reservas no canceladas. Verificar que los packs agotados aparecen con cero unidades disponibles y que el empleado solo puede consultar las ofertas de su establecimiento.
 
 #### R.F.08. CONSULTA DEL RESUMEN DE ACTIVIDAD
 
@@ -214,9 +193,6 @@ Como empleado del establecimiento
 quiero consultar un resumen de actividad mediante las entidades Reserva y Línea de Reserva, incluyendo las reservas recogidas, las unidades entregadas y los importes entre dos fechas,
 para conocer la actividad de mi negocio durante ese periodo.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema muestra únicamente las reservas recogidas del establecimiento durante el periodo consultado. Comprobar que el número de reservas, las unidades entregadas y los importes se calculan correctamente. Verificar que las reservas pendientes y canceladas no se incluyen en el resumen.
 
 #### R.F.09. CONSULTA DE RESEÑAS
 
@@ -224,9 +200,6 @@ Como cliente
 quiero consultar las valoraciones de los establecimientos mediante la entidad Reseña, incluyendo la puntuación, el comentario y la fecha de publicación,
 para conocer las experiencias de otros compradores.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema conserva y muestra correctamente los datos de las reseñas del establecimiento consultado. Comprobar que la puntuación media se calcula a partir de las valoraciones registradas. Verificar que, si no existen reseñas, se indica «Sin valoraciones».
 
 #### R.F.10. CONSULTA DE USUARIOS
 
@@ -234,9 +207,6 @@ Como administrador del sistema
 quiero consultar la información de los usuarios registrados mediante la entidad Usuario, pudiendo filtrar por rol e identificar el establecimiento asociado a cada empleado,
 para distinguir entre clientes, empleados y administradores y supervisar las cuentas existentes.
 
-#### -> Prueba de aceptación
-
-Verificar que el sistema muestra correctamente los usuarios que cumplen los criterios de búsqueda. Comprobar que el filtro por rol devuelve los usuarios correspondientes y que se identifica correctamente el establecimiento asociado a cada empleado. Verificar que las contraseñas se almacenan de forma protegida y no aparecen en las consultas.
 
 #### 4.1.1. Requisitos de información
 #### R.I.01 INFORMACIÓN SOBRE USUARIOS
@@ -245,19 +215,11 @@ Como administrador del sistema
 quiero acceder a la información de los usuarios registrados mediante la entidad Usuario, incluyendo su identificador, nombre, apellidos, correo electrónico y rol,  
 para poder identificar sus cuentas y distinguir entre clientes, empleados y administradores.
 
--> **Prueba de aceptación**
-
-Verificar que el sistema almacena y muestra correctamente el identificador, nombre, apellidos, correo electrónico y rol de cada usuario. Comprobar que la contraseña se almacena de forma protegida y que no se muestra en las consultas.
-
 #### R.I.02 INFORMACIÓN SOBRE ESTABLECIMIENTOS
 
 Como cliente  
 quiero consultar la información de los negocios participantes mediante la entidad Establecimiento, incluyendo su identificador, nombre comercial, dirección, teléfono y descripción,  
 para conocer dónde se encuentran y dónde debo recoger los packs que reserve.
-
--> **Prueba de aceptación**
-
-Verificar que el sistema conserva y muestra correctamente los datos de cada establecimiento. Comprobar que la dirección y el teléfono corresponden al negocio consultado.
 
 #### R.I.03 INFORMACIÓN SOBRE EL PERSONAL
 
@@ -265,19 +227,11 @@ Como administrador del sistema
 quiero consultar la asociación de cada usuario empleado con su establecimiento mediante la relación entre Usuario y Establecimiento,  
 para conocer qué personal pertenece a cada negocio y delimitar su acceso a las ofertas y reservas.
 
--> **Prueba de aceptación**
-
-Verificar que cada empleado está asociado a un único establecimiento y que un establecimiento puede tener varios empleados. Comprobar que la consulta identifica correctamente al empleado y al negocio al que pertenece.
-
 #### R.I.04 INFORMACIÓN SOBRE LAS OFERTAS DE PACKS
 
 Como cliente  
 quiero consultar la información de las ofertas mediante la entidad Pack, incluyendo su identificador, establecimiento, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha, horario de recogida y unidades disponibles,  
 para decidir qué packs se ajustan a mis preferencias y conocer sus condiciones antes de reservar.
-
--> **Prueba de aceptación**
-
-Verificar que el sistema almacena y muestra correctamente todos los datos de cada oferta. Comprobar que el pack está asociado al establecimiento correspondiente y que la información de alérgenos coincide con la facilitada por el negocio. Verificar que las ofertas de distintas fechas conservan su propia disponibilidad y horario.
 
 #### R.I.05 INFORMACIÓN SOBRE RESERVAS
 
@@ -285,19 +239,11 @@ Como empleado del establecimiento
 quiero consultar la información de las reservas de mi negocio mediante la entidad Reserva, incluyendo su identificador, cliente, establecimiento, fecha y hora de realización, fecha de recogida y estado,  
 para identificar las reservas recibidas y organizar las entregas pendientes.
 
--> **Prueba de aceptación**
-
-Verificar que cada reserva conserva correctamente sus datos y está asociada al cliente y establecimiento correspondientes. Comprobar que se muestra su estado actual y que las reservas recogidas y canceladas permanecen en el historial.
-
 #### R.I.06 INFORMACIÓN SOBRE LAS LÍNEAS DE RESERVA
 
 Como cliente  
 quiero consultar los packs incluidos en mis reservas mediante la entidad Línea de Reserva, incluyendo la reserva, el pack, la cantidad y el precio unitario aplicado al confirmar,  
 para comprobar qué productos he reservado y qué importe corresponde a cada uno.
-
--> **Prueba de aceptación**
-
-Verificar que cada línea está asociada a la reserva y al pack correspondientes y que muestra correctamente la cantidad y el precio unitario aplicado. Comprobar que una modificación posterior del precio de la oferta no altera el precio guardado en la línea.
 
 #### R.I.07 INFORMACIÓN SOBRE RESEÑAS
 
@@ -305,27 +251,15 @@ Como cliente
 quiero consultar las valoraciones mediante la entidad Reseña, incluyendo su identificador, reserva asociada, puntuación, comentario y fecha de publicación,  
 para conocer las experiencias de otros compradores con los establecimientos.
 
--> **Prueba de aceptación**
-
-Verificar que el sistema conserva y muestra correctamente la puntuación, el comentario y la fecha de cada reseña. Comprobar que el cliente autor y el establecimiento valorado se identifican mediante la reserva asociada. Verificar que una reseña sin comentario muestra correctamente el resto de sus datos.
-
 #### R.I.08 INFORMACIÓN SOBRE IMPORTES Y RESUMEN DE ACTIVIDAD
 
 Como empleado del establecimiento  
 quiero consultar los importes de las reservas y el resumen de actividad mediante los datos de Reserva y Línea de Reserva, así como las valoraciones obtenidas mediante Reseña,  
 para conocer las unidades entregadas, los importes correspondientes y la puntuación media de mi negocio.
 
--> **Prueba de aceptación**
-
-Verificar que el importe de cada línea se calcula multiplicando la cantidad por el precio unitario guardado y que el total de una reserva es la suma de sus líneas.
-
-Comprobar que el resumen entre dos fechas de recogida incluye únicamente las reservas recogidas del establecimiento consultado y muestra correctamente el número de reservas, las unidades entregadas y la suma de sus importes.
-
-Verificar que el número de reseñas y la puntuación media se calculan a partir de las valoraciones del establecimiento. Si no existen reseñas, comprobar que se indica «Sin valoraciones».
 
 
-
-#### 4.1.2. Reglas de negocio
+#### 4.1.2. Reglas de negocio  ----> AÑADIR PRUEBAS DE ACEPTACIÓN
 #### R.N.01 CORREO ELECTRÓNICO ÚNICO
 
 Como administrador del sistema  
