@@ -381,11 +381,13 @@ para proteger las reservas de los clientes y la información operativa de los es
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+<img width="1062" height="1142" alt="IISSI1_diagramaUML drawio" src="https://github.com/user-attachments/assets/87364370-4e5a-45b1-a707-0746f8f6ed40" />
+
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+<img width="1062" height="1372" alt="escenariosPrueba drawio" src="https://github.com/user-attachments/assets/e40ebe71-b702-47e7-9887-b1cab2d1dc60" />
+
 
 ## 6. Matrices de trazabilidad
 
