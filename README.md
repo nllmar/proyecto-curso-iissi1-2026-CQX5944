@@ -135,136 +135,126 @@ Sus principales necesidades son:
 - Revisar la actividad general del sistema.
 
 ## 4. Catálogo de requisitos
-
-### 4.1. Requisitos funcionales ---> 10 consultas a la base de datos. Consultas que realizan cálculos que aparezcan una de cada una: sum, avg, max, min, count, group by
+### 4.1. Requisitos funcionales
 
 #### R.F.01. CONSULTA DE ESTABLECIMIENTOS
-
-Como cliente
-quiero consultar la información de los negocios participantes mediante la entidad Establecimiento, incluyendo su identificador, nombre comercial, dirección, teléfono y descripción,
-para conocer dónde se encuentran y dónde debo recoger los packs que reserve.
-
-
-#### R.F.02. CONSULTA DE OFERTAS DISPONIBLES
-
-Como cliente
-quiero consultar la información de las ofertas mediante la entidad Pack, pudiendo filtrar por establecimiento, fecha de recogida, tipo de pack y precio máximo,
-para encontrar packs que se ajusten a mis preferencias.
-
-
-#### R.F.03. CONSULTA DEL DETALLE DE UNA OFERTA
-
-Como cliente
-quiero consultar la información de una oferta mediante la entidad Pack, incluyendo su identificador, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha, horario de recogida y unidades disponibles,
-para conocer las características del pack antes de reservarlo.
-
-
-#### R.F.04. CONSULTA DEL HISTORIAL DE RESERVAS
-
-Como cliente
-quiero consultar la información de mis reservas mediante la entidad Reserva, pudiendo filtrar por estado y fecha de recogida,
-para conocer la situación de mis reservas actuales y anteriores.
-
-
-#### R.F.05. CONSULTA DEL DETALLE DE UNA RESERVA
-
-Como cliente
-quiero consultar la información de mis reservas mediante las entidades Reserva y Línea de Reserva, incluyendo los packs, las cantidades, el precio unitario aplicado y el importe total,
-para comprobar qué productos he reservado y qué importe corresponde a cada uno.
-
-
-#### R.F.06. CONSULTA DE RESERVAS PENDIENTES
-
-Como empleado del establecimiento
-quiero consultar las reservas pendientes de mi negocio mediante la entidad Reserva, incluyendo los packs y las cantidades de cada reserva mediante la entidad Línea de Reserva, pudiendo filtrar por fecha de recogida,
-para organizar la entrega de los productos.
-
-
-#### R.F.07. CONSULTA DE OFERTAS Y DISPONIBILIDAD
-
-Como empleado del establecimiento
-quiero consultar la información de las ofertas de mi negocio mediante la entidad Pack, incluyendo las unidades disponibles y las ofertas agotadas,
-para conocer la disponibilidad de los packs publicados.
-
-
-#### R.F.08. CONSULTA DEL RESUMEN DE ACTIVIDAD
-
-Como empleado del establecimiento
-quiero consultar un resumen de actividad mediante las entidades Reserva y Línea de Reserva, incluyendo las reservas recogidas, las unidades entregadas y los importes entre dos fechas,
-para conocer la actividad de mi negocio durante ese periodo.
-
-
-#### R.F.09. CONSULTA DE RESEÑAS
-
-Como cliente
-quiero consultar las valoraciones de los establecimientos mediante la entidad Reseña, incluyendo la puntuación, el comentario y la fecha de publicación,
-para conocer las experiencias de otros compradores.
-
-
-#### R.F.10. CONSULTA DE USUARIOS
-
-Como administrador del sistema
-quiero consultar la información de los usuarios registrados mediante la entidad Usuario, pudiendo filtrar por rol e identificar el establecimiento asociado a cada empleado,
-para distinguir entre clientes, empleados y administradores y supervisar las cuentas existentes.
-
-
-#### 4.1.1. Requisitos de información
-#### R.I.01 INFORMACIÓN SOBRE USUARIOS  --> quiero almacenar no consultar, 
-
-Como administrador del sistema  
-quiero acceder a la información de los usuarios registrados mediante la entidad Usuario, incluyendo su identificador, nombre, apellidos, correo electrónico y rol,  
-para poder identificar sus cuentas y distinguir entre clientes, empleados y administradores.
-
-#### R.I.02 INFORMACIÓN SOBRE ESTABLECIMIENTOS
 
 Como cliente  
 quiero consultar la información de los negocios participantes mediante la entidad Establecimiento, incluyendo su identificador, nombre comercial, dirección, teléfono y descripción,  
 para conocer dónde se encuentran y dónde debo recoger los packs que reserve.
 
+#### R.F.02. CONSULTA DE OFERTAS DISPONIBLES
+
+Como cliente  
+quiero consultar las ofertas de packs con unidades disponibles y cuyo plazo de reserva no haya terminado, pudiendo filtrar por establecimiento, fecha de recogida, tipo de pack y precio máximo,  
+para encontrar packs que se ajusten a mis preferencias.
+
+#### R.F.03. CONSULTA DEL DETALLE DE UNA OFERTA
+
+Como cliente  
+quiero consultar la información de una oferta mediante la entidad Pack, incluyendo su identificador, establecimiento, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha de recogida, horario de recogida y unidades disponibles,  
+para conocer las características del pack antes de reservarlo.
+
+#### R.F.04. CONSULTA DEL HISTORIAL DE RESERVAS
+
+Como cliente  
+quiero consultar mis reservas, incluyendo su identificador, establecimiento, fecha y hora de realización y estado, pudiendo filtrar por estado y fecha de recogida de los packs incluidos,  
+para conocer la situación de mis reservas actuales y anteriores.
+
+#### R.F.05. CONSULTA DEL DETALLE DE UNA RESERVA
+
+Como cliente  
+quiero consultar el detalle de una de mis reservas mediante Reserva, Pack y Línea de Reserva, incluyendo los packs, sus cantidades, el precio unitario aplicado, el importe de cada línea y el importe total calculado como la suma de los importes de sus líneas,  
+para comprobar qué productos he reservado y cuánto debo pagar.
+
+#### R.F.06. CONSULTA DE RESERVAS PENDIENTES
+
+Como empleado del establecimiento  
+quiero consultar las reservas pendientes de mi negocio, incluyendo el cliente, los packs y sus cantidades, pudiendo filtrar por la fecha de recogida de los packs incluidos,  
+para organizar la entrega de los productos.
+
+#### R.F.07. CONSULTA DE DISPONIBILIDAD Y RANGO DE PRECIOS
+
+Como empleado del establecimiento  
+quiero consultar, para una fecha de recogida, la suma de las unidades disponibles y el precio reducido mínimo y máximo de las ofertas de mi negocio, agrupando los resultados por tipo de pack e incluyendo las ofertas agotadas,  
+para conocer la disponibilidad total y el rango de precios de cada tipo de pack.
+
+#### R.F.08. CONSULTA DEL RESUMEN DE ACTIVIDAD
+
+Como empleado del establecimiento  
+quiero consultar, entre dos fechas de recogida, el número de reservas recogidas, la suma de las unidades entregadas y la suma de sus importes, agrupando los resultados por fecha de recogida,  
+para conocer la actividad diaria de mi negocio durante ese periodo.
+
+Cada reserva se contará una sola vez, aunque contenga varias líneas. Los importes se calcularán utilizando las cantidades y los precios unitarios aplicados en las líneas de reserva. Las reservas pendientes y canceladas quedarán excluidas.
+
+#### R.F.09. CONSULTA DE RESEÑAS Y PUNTUACIÓN MEDIA
+
+Como cliente  
+quiero consultar las reseñas de un establecimiento, incluyendo su puntuación, comentario y fecha de publicación, junto con la puntuación media de sus reseñas,  
+para conocer las experiencias de otros compradores y la valoración general del negocio.
+
+Cuando el establecimiento no tenga reseñas, se indicará «Sin valoraciones».
+
+#### R.F.10. CONSULTA DE USUARIOS
+
+Como administrador del sistema  
+quiero consultar los usuarios registrados, incluyendo su identificador, nombre, apellidos, correo electrónico y tipo de usuario, pudiendo filtrar entre clientes, empleados y administradores e identificar el establecimiento asociado a cada empleado,  
+para supervisar las cuentas existentes.
+
+Las contraseñas y sus valores almacenados no se mostrarán en los resultados.
+
+
+
+#### 4.1.1. Requisitos de información
+#### 4.1.1. Requisitos de información
+
+#### R.I.01 INFORMACIÓN SOBRE USUARIOS
+
+Como administrador del sistema  
+quiero almacenar la información de los usuarios mediante la entidad Usuario, incluyendo su identificador, nombre, apellidos, correo electrónico y contraseña almacenada de forma protegida, distinguiendo entre los tipos Cliente, Empleado y Administrador mediante la herencia,  
+para identificar sus cuentas y conservar los datos de los participantes en la plataforma.
+
+#### R.I.02 INFORMACIÓN SOBRE ESTABLECIMIENTOS
+
+Como administrador del sistema  
+quiero almacenar la información de los negocios participantes mediante la entidad Establecimiento, incluyendo su identificador, nombre comercial, dirección, teléfono y descripción,  
+para mantener un registro de los establecimientos que ofrecen packs y de sus datos de contacto y recogida.
+
 #### R.I.03 INFORMACIÓN SOBRE EL PERSONAL
 
 Como administrador del sistema  
-quiero -almacenar del personal de cada establecimiento-consultar la asociación de cada usuario empleado con su establecimiento mediante la relación entre Usuario y Establecimiento,  
-para conocer qué personal pertenece a cada negocio y delimitar su acceso a las ofertas y reservas.
+quiero almacenar la asociación de cada empleado con el establecimiento al que pertenece mediante la relación entre Empleado y Establecimiento, conservando sus datos personales a través de los atributos heredados de Usuario,  
+para identificar al personal de cada negocio y delimitar su acceso a las ofertas y reservas.
 
 #### R.I.04 INFORMACIÓN SOBRE LAS OFERTAS DE PACKS
 
-Como cliente  
-quiero consultar la información de las ofertas mediante la entidad Pack, incluyendo su identificador, establecimiento, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha, horario de recogida y unidades disponibles,  
-para decidir qué packs se ajustan a mis preferencias y conocer sus condiciones antes de reservar.
+Como empleado del establecimiento  
+quiero almacenar la información de las ofertas de mi negocio mediante la entidad Pack, incluyendo su identificador, establecimiento, nombre, descripción del contenido, información de alérgenos, tipo, precio de referencia, precio reducido, fecha de recogida, hora de inicio, hora de fin y unidades disponibles,  
+para conservar las características de los packs ofrecidos y sus condiciones de venta y recogida.
 
 #### R.I.05 INFORMACIÓN SOBRE RESERVAS
 
 Como empleado del establecimiento  
-quiero consultar la información de las reservas de mi negocio mediante la entidad Reserva, incluyendo su identificador, cliente, establecimiento, fecha y hora de realización, fecha de recogida y estado,  
-para identificar las reservas recibidas y organizar las entregas pendientes.
+quiero almacenar la información de las reservas mediante la entidad Reserva, incluyendo su identificador, cliente, establecimiento, fecha y hora de realización y estado, así como los packs incluidos, sus cantidades y los precios unitarios aplicados mediante la clase de asociación Línea de Reserva,  
+para conservar los productos solicitados y las condiciones acordadas al confirmar cada reserva.
 
-#### R.I.06 INFORMACIÓN SOBRE LAS LÍNEAS DE RESERVA  ---> quitar
-
-Como cliente  
-quiero consultar los packs incluidos en mis reservas mediante la entidad Línea de Reserva, incluyendo la reserva, el pack, la cantidad y el precio unitario aplicado al confirmar,  
-para comprobar qué productos he reservado y qué importe corresponde a cada uno.
-
-#### R.I.07 INFORMACIÓN SOBRE RESEÑAS
+#### R.I.06 INFORMACIÓN SOBRE RESEÑAS
 
 Como cliente  
-quiero consultar las valoraciones mediante la entidad Reseña, incluyendo su identificador, reserva asociada, puntuación, comentario y fecha de publicación,  
-para conocer las experiencias de otros compradores con los establecimientos.
+quiero almacenar mi valoración de una reserva recogida mediante la entidad Reseña, incluyendo su identificador, reserva asociada, puntuación, comentario opcional y fecha de publicación,  
+para dejar constancia de mi experiencia con el establecimiento.
 
-#### R.I.08 INFORMACIÓN SOBRE IMPORTES Y RESUMEN DE ACTIVIDAD  -- requisito funcional quitar de aquí
-
-Como empleado del establecimiento  
-quiero consultar los importes de las reservas y el resumen de actividad mediante los datos de Reserva y Línea de Reserva, así como las valoraciones obtenidas mediante Reseña,  
-para conocer las unidades entregadas, los importes correspondientes y la puntuación media de mi negocio.
-
-
-
-#### 4.1.2. Reglas de negocio  ----> AÑADIR PRUEBAS DE ACEPTACIÓN
+#### 4.1.2. Reglas de negocio  
 #### R.N.01 CORREO ELECTRÓNICO ÚNICO
 
 Como administrador del sistema  
 quiero que no se permita registrar dos usuarios con el mismo correo electrónico,  
 para evitar cuentas duplicadas y poder identificar a cada usuario.
+
+-> **Pruebas de aceptación**
+
+- Comprobar que se permite registrar un usuario con un correo no utilizado.
+- Verificar que se rechaza un correo ya registrado, aunque el nuevo usuario sea de otro tipo.
 
 #### R.N.02 VALIDACIÓN DEL PRECIO REDUCIDO
 
@@ -272,11 +262,23 @@ Como administrador del sistema
 quiero que el precio reducido de cada pack sea mayor que cero y menor que su precio de referencia,  
 para garantizar que las ofertas tengan un precio válido e inferior al habitual.
 
+-> **Pruebas de aceptación**
+
+- Comprobar que se acepta un precio reducido de 5 € cuando el precio de referencia es de 10 €.
+- Verificar que se rechaza un precio reducido menor o igual que cero, o igual o superior al precio de referencia.
+
+
 #### R.N.03 VALIDACIÓN DE LA DISPONIBILIDAD
 
 Como empleado del establecimiento  
 quiero que las unidades disponibles sean un número entero mayor o igual que cero y que los packs sin unidades no admitan reservas,  
 para mantener una disponibilidad válida y evitar reservas de packs agotados.
+
+-> **Pruebas de aceptación**
+
+- Comprobar que se acepta una disponibilidad de cero unidades, pero no se permiten reservas de ese pack.
+- Verificar que se rechazan disponibilidades negativas o no enteras.
+
 
 #### R.N.04 VALIDACIÓN DE LA FRANJA DE RECOGIDA
 
@@ -284,11 +286,23 @@ Como empleado del establecimiento
 quiero que la hora de fin de recogida sea posterior a la hora de inicio y que ambas correspondan a la fecha de la oferta,  
 para establecer un intervalo de recogida coherente.
 
+-> **Pruebas de aceptación**
+
+- Comprobar que se acepta una franja de 19:00 a 20:00 para la fecha de recogida.
+- Verificar que se rechaza una hora de fin igual o anterior a la hora de inicio.
+
+
 #### R.N.05 VALIDACIÓN DE LA COMPOSICIÓN DE LAS RESERVAS
 
 Como empleado del establecimiento  
 quiero que cada reserva contenga al menos una línea, que todos sus packs pertenezcan al mismo establecimiento y fecha de recogida y que un mismo pack no aparezca en varias líneas,  
 para organizar correctamente la preparación y entrega de los productos.
+
+-> **Pruebas de aceptación**
+
+- Comprobar que se acepta una reserva con packs diferentes del mismo establecimiento y fecha, si cumple las demás reglas.
+- Verificar que se rechaza una reserva sin líneas, con packs repetidos o con packs de distintos establecimientos o fechas.
+
 
 #### R.N.06 VALIDACIÓN DE CANTIDADES Y EXISTENCIAS
 
@@ -296,11 +310,23 @@ Como empleado del establecimiento
 quiero que las cantidades reservadas sean números enteros positivos, que no superen las unidades disponibles y que la confirmación de todas las líneas y la reducción de existencias se realicen conjuntamente,  
 para evitar reservas sin disponibilidad y cambios parciales en el sistema.
 
+-> **Pruebas de aceptación**
+
+- Comprobar que reservar 2 unidades de un pack con 5 disponibles confirma la reserva y deja 3 unidades.
+- Verificar que, si alguna línea tiene una cantidad no válida o superior a la disponibilidad, se rechaza toda la reserva sin modificar las existencias.
+
+
 #### R.N.07 CONTROL DEL PLAZO DE RESERVA
 
 Como empleado del establecimiento  
 quiero que solo se confirmen reservas antes del inicio de la primera franja de recogida de los packs incluidos,  
 para conocer las reservas antes de comenzar las entregas.
+
+-> **Pruebas de aceptación**
+
+- Comprobar que se permite confirmar una reserva antes del inicio de la primera franja de recogida de sus packs.
+- Verificar que se rechaza la confirmación al comenzar esa franja o después, teniendo en cuenta la fecha y la hora.
+
 
 #### R.N.08 CONTROL DE LOS ESTADOS DE LAS RESERVAS
 
@@ -308,11 +334,23 @@ Como administrador del sistema
 quiero que las reservas confirmadas comiencen en estado «Pendiente» y que únicamente puedan pasar a «Recogida» o «Cancelada», sin permitir otros estados ni cambios posteriores desde estos dos estados finales,  
 para mantener un seguimiento coherente de las reservas.
 
+-> **Pruebas de aceptación**
+
+- Comprobar que una reserva comienza como «Pendiente» y puede pasar a «Recogida» o «Cancelada» cuando se cumplen las condiciones correspondientes.
+- Verificar que se rechazan estados no permitidos y cambios desde los estados finales «Recogida» y «Cancelada».
+
+
 #### R.N.09 CONTROL DE CANCELACIONES
 
 Como cliente  
 quiero poder cancelar únicamente mis reservas pendientes antes del inicio de la primera franja de recogida y que la cancelación devuelva las unidades disponibles una sola vez y de forma conjunta con el cambio de estado,  
 para anular una reserva dentro del plazo permitido y permitir que otros clientes reserven esos packs.
+
+-> **Pruebas de aceptación**
+
+- Comprobar que el titular puede cancelar su reserva pendiente antes del plazo, cambiando el estado y devolviendo las unidades conjuntamente y una sola vez.
+- Verificar que se rechaza la cancelación de una reserva ajena, recogida o fuera de plazo.
+
 
 #### R.N.10 CONSERVACIÓN DEL PRECIO DE LAS RESERVAS
 
@@ -320,11 +358,23 @@ Como cliente
 quiero que cada línea conserve el precio reducido aplicado al confirmar la reserva, aunque posteriormente cambie el precio de la oferta, y que el total se calcule sumando la cantidad por el precio unitario de cada línea,  
 para pagar el importe acordado al realizar la reserva.
 
+-> **Pruebas de aceptación**
+
+- Comprobar que una reserva de 2 unidades a 4 € conserva su total de 8 € aunque el precio de la oferta cambie después.
+- Verificar que el total de una reserva con varias líneas es la suma de sus cantidades multiplicadas por los precios unitarios guardados.
+
+
 #### R.N.11 CONTROL DEL REGISTRO DE RECOGIDAS
 
 Como empleado del establecimiento  
 quiero que solo el personal de mi establecimiento pueda marcar sus reservas pendientes como recogidas, una vez confirmadas la entrega de los productos y el cobro del importe,  
 para mantener un registro fiable de las entregas realizadas.
+
+-> **Pruebas de aceptación**
+
+- Comprobar que un empleado del establecimiento puede marcar una reserva pendiente como recogida tras confirmar la entrega y el cobro.
+- Verificar que se rechaza el registro si el usuario no es empleado de ese establecimiento, la reserva no está pendiente o falta confirmar la entrega o el cobro.
+
 
 #### R.N.12 VALIDACIÓN DE RESEÑAS
 
@@ -332,6 +382,10 @@ Como administrador del sistema
 quiero que solo el cliente titular de una reserva recogida pueda publicar una única reseña sobre ella y que su puntuación sea un número entero entre 1 y 5,  
 para que las valoraciones correspondan a compras realizadas y utilicen una escala común.
 
+-> **Pruebas de aceptación**
+
+- Comprobar que el titular de una reserva recogida y sin reseña puede publicar una puntuación entera entre 1 y 5.
+- Verificar que se rechazan reseñas duplicadas, sobre reservas ajenas o no recogidas, o con puntuaciones no válidas.
 
 
 ### 4.2. Mapa de historias de usuario (opcional)
