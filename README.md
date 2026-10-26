@@ -185,7 +185,6 @@ Como empleado del establecimiento
 quiero consultar, entre dos fechas de recogida, el número de reservas recogidas, la suma de las unidades entregadas y la suma de sus importes, agrupando los resultados por fecha de recogida,  
 para conocer la actividad diaria de mi negocio durante ese periodo.
 
-Cada reserva se contará una sola vez, aunque contenga varias líneas. Los importes se calcularán utilizando las cantidades y los precios unitarios aplicados en las líneas de reserva. Las reservas pendientes y canceladas quedarán excluidas.
 
 #### R.F.09. CONSULTA DE RESEÑAS Y PUNTUACIÓN MEDIA
 
@@ -193,15 +192,11 @@ Como cliente
 quiero consultar las reseñas de un establecimiento, incluyendo su puntuación, comentario y fecha de publicación, junto con la puntuación media de sus reseñas,  
 para conocer las experiencias de otros compradores y la valoración general del negocio.
 
-Cuando el establecimiento no tenga reseñas, se indicará «Sin valoraciones».
-
 #### R.F.10. CONSULTA DE USUARIOS
 
 Como administrador del sistema  
 quiero consultar los usuarios registrados, incluyendo su identificador, nombre, apellidos, correo electrónico y tipo de usuario, pudiendo filtrar entre clientes, empleados y administradores e identificar el establecimiento asociado a cada empleado,  
 para supervisar las cuentas existentes.
-
-Las contraseñas y sus valores almacenados no se mostrarán en los resultados.
 
 
 
