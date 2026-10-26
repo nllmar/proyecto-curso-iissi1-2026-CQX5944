@@ -385,6 +385,9 @@ para que las valoraciones correspondan a compras realizadas y utilicen una escal
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
+<img width="626" height="445" alt="MAPAHISTORIAUSUARIO" src="https://github.com/user-attachments/assets/2dfaedbc-d8c5-4b52-9709-3ce8fbe96aed" />
+
+
 ### 4.3. Requisitos no funcionales 
 
 
