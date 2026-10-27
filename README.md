@@ -445,15 +445,23 @@ para proteger las reservas de los clientes y la información operativa de los es
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+### 6.1. Matriz de trazabilidad de clases
+
+| Clase / Reglas y requisitos | **Administrador** | **Personal del establecimiento** | **Cliente** | **Usuario** | **Establecimiento** | **Pack** | **Reserva** | **Línea de Reserva** | **Reseña** |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **RN-01** | ✓ | | | ✓ | | | | | |
+| **RN-02** | ✓ | | | | | ✓ | | | |
+| **RN-03** | | ✓ | ✓ | | | ✓ | | | |
+| **RN-04** | | ✓ | | | | ✓ | | | |
+| **RN-05** | | | ✓ | | ✓ | ✓ | ✓ | ✓ | |
+| **RN-06** | | | ✓ | | | ✓ | ✓ | ✓ | |
+| **RN-07** | | | ✓ | | | ✓ | ✓ | ✓ | |
+| **RN-08** | ✓ | ✓ | | | | | ✓ | | |
+| **RN-09** | | | ✓ | | | ✓ | ✓ | ✓ | |
+| **RN-10** | | | ✓ | | | ✓ | ✓ | ✓ | |
+| **RN-11** | | ✓ | | | ✓ | | ✓ | | |
+| **RN-12** | ✓ | | ✓ | | | | ✓ | | ✓ |
+| **RI-01** | ✓ |
 
 -- fin entregable 2 --
 
