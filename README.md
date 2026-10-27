@@ -448,7 +448,7 @@ para proteger las reservas de los clientes y la información operativa de los es
 | Requisito | Administrador | Empleado | Cliente | Usuario | Establecimiento | Pack | Reserva | Línea de Reserva | Reseña |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | RI-01 | ✓ | ✓ | ✓ | ✓ | | | | | |
-| RI-02 | ✓ | | | | ✓ | | | | |
+| RI-02 | | | | | ✓ | | | | |
 | RI-03 | | ✓ | | ✓ | ✓ | | | | |
 | RI-04 | | ✓ | | | ✓ | ✓ | | | |
 | RI-05 | | ✓ | ✓ | | ✓ | ✓ | ✓ | ✓ | |
@@ -463,31 +463,31 @@ para proteger las reservas de los clientes y la información operativa de los es
 | RN-08 | | ✓ | | | | | ✓ | | |
 | RN-09 | | | ✓ | | | ✓ | ✓ | ✓ | |
 | RN-10 | | | ✓ | | | ✓ | ✓ | ✓ | |
-| RN-11 | | ✓ | | | ✓ | | ✓ | | |
+| RN-11 | | ✓ | ✓ | | ✓ | | ✓ | | |
 | RN-12 | | | ✓ | | | | ✓ | | ✓ |
 
-### 6.2. Matriz de trazabilidad de asociaciones
+## 6.2. Matriz de trazabilidad de asociaciones
 
-| Requisito | Empleado–Establecimiento | Establecimiento–Pack | Cliente–Reserva | Reserva–Línea de Reserva | Línea de Reserva–Pack | Reserva–Reseña |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| RI-01 | | | | | | |
-| RI-02 | | | | | | |
-| RI-03 | ✓ | | | | | |
-| RI-04 | | ✓ | | | | |
-| RI-05 | | ✓ | ✓ | ✓ | ✓ | |
-| RI-06 | | | | | | ✓ |
-| RN-01 | | | | | | |
-| RN-02 | | ✓ | | | | |
-| RN-03 | | ✓ | | | | |
-| RN-04 | | ✓ | | | | |
-| RN-05 | | ✓ | | ✓ | ✓ | |
-| RN-06 | | | ✓ | ✓ | ✓ | |
-| RN-07 | | ✓ | ✓ | ✓ | ✓ | |
-| RN-08 | | | | ✓ | | |
-| RN-09 | | | ✓ | ✓ | | |
-| RN-10 | | | | ✓ | ✓ | |
-| RN-11 | ✓ | | | ✓ | | |
-| RN-12 | | | ✓ | | | ✓ |
+| Requisito | Empleado–Establecimiento | Establecimiento–Pack | Cliente–Reserva | Reserva–Establecimiento | Reserva–Línea de Reserva | Línea de Reserva–Pack | Reserva–Reseña |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| RI-01 | |  | | | | | |
+| RI-02 | |  | | | | | |
+| RI-03 | ✓ | | | | | | |
+| RI-04 | | ✓ | | | | | |
+| RI-05 | | ✓ | ✓ | ✓ | ✓ | ✓ | |
+| RI-06 | | | | | | | ✓ |
+| RN-01 | |  | | | | | |
+| RN-02 | | ✓ | | | | | |
+| RN-03 | | ✓ | | | | | |
+| RN-04 | | ✓ | | | | | |
+| RN-05 | | ✓ | | ✓ | ✓ | ✓ | |
+| RN-06 | | | | | ✓ | ✓ | |
+| RN-07 | | | | ✓ | ✓ | ✓ | |
+| RN-08 | | | | | ✓ | | |
+| RN-09 | | | ✓ | | ✓ | ✓ | |
+| RN-10 | | | | | ✓ | ✓ | |
+| RN-11 | ✓ | | ✓ | ✓ | ✓ | | |
+| RN-12 | | | ✓ | | | | ✓ |
 
 -- fin entregable 2 --
 
