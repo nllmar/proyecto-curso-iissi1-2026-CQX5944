@@ -443,57 +443,51 @@ para proteger las reservas de los clientes y la información operativa de los es
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
-
 ### 6.1. Matriz de trazabilidad de clases
 
-| Clase / Reglas y requisitos | **Administrador** | **Personal del establecimiento** | **Cliente** | **Usuario** | **Establecimiento** | **Pack** | **Reserva** | **Línea de Reserva** | **Reseña** |
+| Requisito | Administrador | Empleado | Cliente | Usuario | Establecimiento | Pack | Reserva | Línea de Reserva | Reseña |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **RN-01** | ✓ | | | ✓ | | | | | |
-| **RN-02** | ✓ | | | | | ✓ | | | |
-| **RN-03** | | ✓ | ✓ | | | ✓ | | | |
-| **RN-04** | | ✓ | | | | ✓ | | | |
-| **RN-05** | | | ✓ | | ✓ | ✓ | ✓ | ✓ | |
-| **RN-06** | | | ✓ | | | ✓ | ✓ | ✓ | |
-| **RN-07** | | | ✓ | | | ✓ | ✓ | ✓ | |
-| **RN-08** | ✓ | ✓ | | | | | ✓ | | |
-| **RN-09** | | | ✓ | | | ✓ | ✓ | ✓ | |
-| **RN-10** | | | ✓ | | | ✓ | ✓ | ✓ | |
-| **RN-11** | | ✓ | | | ✓ | | ✓ | | |
-| **RN-12** | ✓ | | ✓ | | | | ✓ | | ✓ |
-| **RI-01** | ✓ | | | ✓ | | | | | |
-| **RI-02** | | | ✓ | | ✓ | | | | |
-| **RI-03** | ✓ | ✓ | | ✓ | ✓ | | | | |
-| **RI-04** | | ✓ | ✓ | | ✓ | ✓ | | | |
-| **RI-05** | | ✓ | ✓ | | ✓ | | ✓ | | |
-| **RI-06** | | | ✓ | | | ✓ | ✓ | ✓ | |
-| **RI-07** | | | ✓ | | ✓ | | ✓ | | ✓ |
-| **RI-08** | | ✓ | | | ✓ | | ✓ | ✓ | ✓ |
+| RI-01 | ✓ | ✓ | ✓ | ✓ | | | | | |
+| RI-02 | ✓ | | | | ✓ | | | | |
+| RI-03 | | ✓ | | ✓ | ✓ | | | | |
+| RI-04 | | ✓ | | | ✓ | ✓ | | | |
+| RI-05 | | ✓ | ✓ | | ✓ | ✓ | ✓ | ✓ | |
+| RI-06 | | | ✓ | | ✓ | | ✓ | | ✓ |
+| RN-01 | ✓ | ✓ | ✓ | ✓ | | | | | |
+| RN-02 | | | | | | ✓ | | | |
+| RN-03 | | ✓ | | | | ✓ | | | |
+| RN-04 | | | | | | ✓ | | | |
+| RN-05 | | | ✓ | | ✓ | ✓ | ✓ | ✓ | |
+| RN-06 | | | ✓ | | | ✓ | ✓ | ✓ | |
+| RN-07 | | | ✓ | | | ✓ | ✓ | ✓ | |
+| RN-08 | | ✓ | | | | | ✓ | | |
+| RN-09 | | | ✓ | | | ✓ | ✓ | ✓ | |
+| RN-10 | | | ✓ | | | ✓ | ✓ | ✓ | |
+| RN-11 | | ✓ | | | ✓ | | ✓ | | |
+| RN-12 | | | ✓ | | | | ✓ | | ✓ |
 
 ### 6.2. Matriz de trazabilidad de asociaciones
 
-| Asociación / Reglas y requisitos | **estáAsociadoA** | **publica** | **realiza** | **perteneceA** | **contiene** | **correspondeA** | **tieneReseña** |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **RN-01** | | | | | | | |
-| **RN-02** | | ✓ | | | | | |
-| **RN-03** | | ✓ | | | | | |
-| **RN-04** | | ✓ | | | | | |
-| **RN-05** | | | ✓ | ✓ | ✓ | ✓ | |
-| **RN-06** | | | ✓ | | ✓ | ✓ | |
-| **RN-07** | | | ✓ | | ✓ | ✓ | |
-| **RN-08** | | | | | ✓ | | |
-| **RN-09** | | | ✓ | | ✓ | ✓ | |
-| **RN-10** | | | ✓ | | ✓ | ✓ | |
-| **RN-11** | ✓ | | | ✓ | | | |
-| **RN-12** | | | ✓ | | | | ✓ |
-| **RI-01** | | | | | | | |
-| **RI-02** | | | | | | | |
-| **RI-03** | ✓ | | | | | | |
-| **RI-04** | | ✓ | | | | | |
-| **RI-05** | | | ✓ | ✓ | | | |
-| **RI-06** | | | | | ✓ | ✓ | |
-| **RI-07** | | | ✓ | | | | ✓ |
-| **RI-08** | | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Requisito | Empleado–Establecimiento | Establecimiento–Pack | Cliente–Reserva | Reserva–Línea de Reserva | Línea de Reserva–Pack | Reserva–Reseña |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| RI-01 | | | | | | |
+| RI-02 | | | | | | |
+| RI-03 | ✓ | | | | | |
+| RI-04 | | ✓ | | | | |
+| RI-05 | | ✓ | ✓ | ✓ | ✓ | |
+| RI-06 | | | | | | ✓ |
+| RN-01 | | | | | | |
+| RN-02 | | ✓ | | | | |
+| RN-03 | | ✓ | | | | |
+| RN-04 | | ✓ | | | | |
+| RN-05 | | ✓ | | ✓ | ✓ | |
+| RN-06 | | | ✓ | ✓ | ✓ | |
+| RN-07 | | ✓ | ✓ | ✓ | ✓ | |
+| RN-08 | | | | ✓ | | |
+| RN-09 | | | ✓ | ✓ | | |
+| RN-10 | | | | ✓ | ✓ | |
+| RN-11 | ✓ | | | ✓ | | |
+| RN-12 | | | ✓ | | | ✓ |
 
 -- fin entregable 2 --
 
