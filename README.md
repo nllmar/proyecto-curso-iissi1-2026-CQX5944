@@ -431,7 +431,7 @@ para proteger las reservas de los clientes y la información operativa de los es
 
 ## 5. Modelo conceptual
 
-### 5.1. Diagramas de clases UML
+### 5.1. Diagramas de clases UML -- quitar precio unitario, cambiar verbo de reserva-establecimiento
 
 <img width="1062" height="1142" alt="IISSI1_diagramaUML drawio" src="https://github.com/user-attachments/assets/87364370-4e5a-45b1-a707-0746f8f6ed40" />
 
